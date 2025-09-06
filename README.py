@@ -1,6 +1,6 @@
 # games
 code behind some  games
-"""SNAKE,WATER AND GUN GAME"""
+"""(1)SNAKE,WATER AND GUN GAME"""
 
 import random
 
@@ -40,3 +40,37 @@ else:
 
 
 print("your choice",youstr,"computer choice is",comp)
+
+"""(2)Number geussing game"""
+
+import random
+g = random.randint(1,10)
+while True:
+    n = int(input("Guess a number between 1 to 10: "))
+    if n == g:
+        print("✅ You are right!")
+        break
+    else:
+        print("❌ Wrong! Try again.")
+
+"""(3)Number geussing game 2"""
+import random
+g = random.randint(1,100)
+attempts = 0 
+while attempts <8:
+    n = int(input("Guess a number between 1 to 100: "))
+    attempts +=1
+    if(n==g):
+        print("✅ You are right,you took",attempts,"attempts")
+        break
+    elif(n > g):
+        print("too high")
+    elif(n<g):
+        print("too low ")
+
+if(attempts == 8 and n!=g):
+    print("Game Over! The correct number was", g)
+
+
+
+
